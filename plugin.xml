@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="cn.weltown.cunit.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="cn.weltown.cunit.Perspective"
+            name="RCP Perspective"
+            id="cn.weltown.cunit.defaultPerspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="cn.weltown.cunit.application"
+            name="cunit rcp">
+         <property
+               name="applicationXMI"
+               value="cn.weltown.cunit/Application.e4xmi">
+               
+         </property>
+      </product>
+   </extension>
+
+</plugin>
